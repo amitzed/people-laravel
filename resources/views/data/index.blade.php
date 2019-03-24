@@ -34,6 +34,8 @@
           <td>{{ $data->age }}</td>
           <td>{{ $data->email }}</td>
           <td>{{ $data->secret }}</td>
+          <td>{{ $data->secret }}</td>
+          <td>{{ $data->secret }}</td>
           <td>
             <a href="{{ route('data.edit',$data->id) }}" class="btn btn-primary">Edit</a>
           </td>
