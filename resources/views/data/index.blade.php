@@ -27,7 +27,7 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($data as $data)
+        @foreach($data->sortBy('age') as $data)
         <tr>
           <td>{{ $data->id }}</td>
           <td>{{ $data->first_name }} {{ $data->last_name }}</td>
