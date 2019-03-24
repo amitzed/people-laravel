@@ -7,6 +7,9 @@
 <p align="center">
   <img src="backend.png" width="650" title="hover text">
 </p>
+<p align="center">
+  <img src="phpMyAdmin.png" width="650" title="hover text">
+</p>
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
