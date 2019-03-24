@@ -40,7 +40,7 @@
         <label for="secret">Secret:</label>
         <input type="text" class="form-control" name="secret">
       </div>
-      <button type="submit" class="btn btn-primary-outline">Add Data</button>
+      <button type="submit" class="btn btn-primary">Add Data</button>
     </form>
   </div>
   </div>

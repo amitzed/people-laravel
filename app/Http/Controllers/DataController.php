@@ -14,7 +14,9 @@ class DataController extends Controller
      */
     public function index()
     {
-        //
+        $data = Data::all();
+
+        return view('data.index', compact('data'));
     }
 
     /**
