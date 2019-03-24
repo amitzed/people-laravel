@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <div class="frontImage">
+          <img src="images/sketch.png" alt="">
+        </div>
         <!-- Styles -->
         <style>
             html, body {
@@ -18,6 +20,14 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+            .frontImage {
+              height: 20px;
+              width: 20px;
+              opacity: .3;
+            }
+            span {
+              color: red;
             }
 
             .full-height {
@@ -45,7 +55,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 30px;
             }
 
             .links > a {
@@ -56,6 +66,11 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                transition: ease-in-out .5s;
+            }
+            .links > a:hover {
+                color: blue;
+                letter-spacing: .12rem;
             }
 
             .m-b-md {
@@ -81,17 +96,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    If using <span>php artisan serve</span> then <span>Localhost:8000/data</span> (Direct Links Below)
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a target="_blank" href="http://localhost:8000/data">Localhost:8000/data</a>
+                    <a target="_blank" href="http://localhost:8000/data/create">Localhost:8000/data/create</a>
+                    <a target="_blank" href="http://localhost:8000/data/1/edit">Localhost:8000/data/{index}1/edit</a>
+                    <a target="_blank" href="https://github.com/amitzed/people-laravel/tree/backendDev">GitHub for Backend</a>
+                    <a target="_blank" href="https://github.com/amitzed/people-laravel/tree/master">GitHub Master Branch</a>
                 </div>
             </div>
         </div>
