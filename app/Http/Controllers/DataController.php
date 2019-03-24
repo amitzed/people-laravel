@@ -74,7 +74,8 @@ class DataController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Data::find($id);
+        return view('data.edit', compact('data'));
     }
 
     /**
@@ -86,7 +87,22 @@ class DataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+          'first_name'=>'required',
+          'last_name'=>'required',
+          'email'=>'required',
+          'secret'=>'required'
+        ]);
+
+        $data = Data::find($id);
+        $data->first_name = $request->get('first_name');
+        $data->last_name = $request->get('last_name');
+        $data->age = $request->get('age');
+        $data->email = $request->get('email');
+        $data->secret = $request->get('secret');
+        $data->save();
+
+        return redirect('/data')->with('success', 'Data Updated...');
     }
 
     /**
@@ -97,6 +113,9 @@ class DataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Data::find($id);
+        $data->delete();
+
+        return redirect('/data')->with('success', 'Data has been deleted.');
     }
 }

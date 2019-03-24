@@ -1,9 +1,20 @@
 @extends('base')
 
 @section('main')
+<div class="col-sm-12">
+  @if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}
+    </div>
+  @endif
+</div>
+
 <div class="row">
   <div class="col-sm-12">
-    <h1 class="display-3">Data</h1>
+    <h1 class="display-3" style="float:left; margin:0;">Data</h1>
+    <div>
+      <a href="{{ route('data.create')}}" class="btn btn-warning" style="float:right; margin-top:30px;">Enter New Data</a>
+    </div>
     <table class="table table-striped">
       <thead>
         <tr>
