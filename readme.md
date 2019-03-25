@@ -1,8 +1,12 @@
 
+## $ php artisan serve
+
 ## Routes:
-#### localhost:8888/people-laravel/public/data
-#### localhost:8888/people-laravel/public/data/create
-#### localhost:8888/people-laravel/public/data/{index}/edit
+#### [localhost:8000](http://localhost:8000/)
+#### [localhost:8000/data](http://localhost:8000/data)
+#### [localhost:8000/data/create](http://localhost:8000/data/create)
+#### [localhost:8000/data/{index}/edit](http://localhost:8000/data/1/edit)
+
 
 <p align="center">
   <img src="backend.png" width="650" title="hover text">
