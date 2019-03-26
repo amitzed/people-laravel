@@ -24,7 +24,7 @@
           <td>Email</td>
           <td>Secret</td>
           <td colspan = 2>Update</td>
-          <td colspan = 2>Created</td>
+          <td>Created</td>
         </tr>
       </thead>
       <tbody>
