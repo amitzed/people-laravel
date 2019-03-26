@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        \App\Data::insert([
+        \App\Post::insert([
             'first_name' => 'cody',
             'last_name' => 'duder',
             'age' => 38,
@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             'secret' => 'VXNlIHRoaXMgc2VjcmV0IHBocmFzZSBzb21ld2hlcmUgaW4geW91ciBjb2RlJ3MgY29tbWVudHM='
         ]);
 
-        \App\Data::insert([
+        \App\Post::insert([
           'first_name' => 'ladee',
           'last_name' => 'linter',
           'age' => 99,

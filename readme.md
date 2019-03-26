@@ -1,11 +1,9 @@
 
-## $ php artisan serve
-
+#### Set to PORT 8889 -> Please see .env file for MySQL DB info -> php artisan serve
 ## Routes:
 #### [localhost:8000](http://localhost:8000/)
-#### [localhost:8000/data](http://localhost:8000/data)
-#### [localhost:8000/data/create](http://localhost:8000/data/create)
-#### [localhost:8000/data/{index}/edit](http://localhost:8000/data/1/edit)
+#### [localhost:8000/posts](http://localhost:8000/posts)
+#### [localhost:8000/posts/create](http://localhost:8000/posts/create)
 
 <p align="center">
   <img src="backend.png" width="650" title="hover text">

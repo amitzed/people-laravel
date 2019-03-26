@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 
-Route::resource('data', 'DataController');
+Route::resource('posts', 'PostController');

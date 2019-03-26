@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Data;
+use App\Post;
 use Illuminate\Http\Request;
 
-
-class DataController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,9 @@ class DataController extends Controller
      */
     public function index()
     {
-        $data = Data::all();
+      $posts = Post::all();
 
-        return view('data.index', compact('data'));
+      return view('posts.index', compact('posts'));
     }
 
     /**
@@ -26,7 +25,7 @@ class DataController extends Controller
      */
     public function create()
     {
-      return view('data.create');
+      return view('posts.create');
     }
 
     /**
@@ -44,15 +43,15 @@ class DataController extends Controller
         'secret'=>'required'
       ]);
 
-      $data = new Data([
+      $post = new Post([
         'first_name' => $request->get('first_name'),
         'last_name' => $request->get('last_name'),
         'age' => $request->get('age'),
         'email' => $request->get('email'),
         'secret' => $request->get('secret')
       ]);
-      $data->save();
-      return redirect('/data')->with('success', "Data Saved...");
+      $post->save();
+      return redirect('/posts')->with('success', "Data Saved...");
     }
 
     /**
@@ -74,8 +73,8 @@ class DataController extends Controller
      */
     public function edit($id)
     {
-        $data = Data::find($id);
-        return view('data.edit', compact('data'));
+      $post = Post::find($id);
+      return view('posts.edit', compact('post'));
     }
 
     /**
@@ -87,22 +86,22 @@ class DataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-          'first_name'=>'required',
-          'last_name'=>'required',
-          'email'=>'required',
-          'secret'=>'required'
-        ]);
+      $request->validate([
+        'first_name'=>'required',
+        'last_name'=>'required',
+        'email'=>'required',
+        'secret'=>'required'
+      ]);
 
-        $data = Data::find($id);
-        $data->first_name = $request->get('first_name');
-        $data->last_name = $request->get('last_name');
-        $data->age = $request->get('age');
-        $data->email = $request->get('email');
-        $data->secret = $request->get('secret');
-        $data->save();
+      $post = Post::find($id);
+      $post->first_name = $request->get('first_name');
+      $post->last_name = $request->get('last_name');
+      $post->age = $request->get('age');
+      $post->email = $request->get('email');
+      $post->secret = $request->get('secret');
+      $post->save();
 
-        return redirect('/data')->with('success', 'Data Updated...');
+      return redirect('/posts')->with('success', 'Data Updated...');
     }
 
     /**
@@ -113,9 +112,9 @@ class DataController extends Controller
      */
     public function destroy($id)
     {
-        $data = Data::find($id);
-        $data->delete();
+      $post = Post::find($id);
+      $post->delete();
 
-        return redirect('/data')->with('success', 'Data has been deleted.');
+      return redirect('/posts')->with('success', 'Data has been deleted.');
     }
 }
