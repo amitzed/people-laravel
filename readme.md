@@ -1,5 +1,7 @@
 
-#### Set to PORT 8889 -> Please see .env file for MySQL DB info -> php artisan serve
+#### -> Set to PORT 8889 -> Please see .env file for MySQL DB info -> php artisan serve.
+#### -> To pre-seed data: php artisan db:seed --class=DatabaseSeeder
+
 ## Routes:
 #### [localhost:8000](http://localhost:8000/)
 #### [localhost:8000/posts](http://localhost:8000/posts)
